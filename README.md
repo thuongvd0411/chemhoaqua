@@ -81,3 +81,23 @@ Trình duyệt sẽ tự động mở địa chỉ (thường là `http://localh
 - Đảm bảo cấp quyền truy cập Camera cho trình duyệt.
 - Nếu video bị lag hoặc không hiện, hãy thử tải lại trang (F5).
 - Nên đứng cách camera khoảng 1-2 mét để MediaPipe nhận diện tốt nhất.
+
+## Hướng Dẫn Deploy (Xuất Bản)
+
+Để đưa game này lên mạng (Public) để bạn bè cùng chơi, cách tốt nhất là sử dụng **Streamlit Cloud** (Miễn phí & Nhanh).
+
+### Bước 1: Đẩy code lên GitHub
+Nếu bạn đang đọc file này trên GitHub thì bạn đã làm xong bước này!
+
+### Bước 2: Deploy lên Streamlit Cloud
+1. Truy cập [share.streamlit.io](https://share.streamlit.io/).
+2. Đăng nhập bằng tài khoản GitHub của bạn.
+3. Chọn **"New app"**.
+4. Chọn Repository này (`test-web-camera` hoặc tên repo của bạn).
+5. Chọn Branch (thường là `main` hoặc `master`).
+6. Chọn Main file path: `app.py`.
+7. Nhấn **Review** và **Deploy!**
+
+Đợi 1-2 phút, game của bạn sẽ chạy online và bạn có thể gửi link cho mọi người!
+
+> **Lưu ý:** Vì game dùng Camera (WebRTC), Streamlit Cloud cần được cấp quyền HTTPS (mặc định đã có). Một số mạng công ty/trường học có thể chặn kết nối STUN/TURN server của WebRTC.
